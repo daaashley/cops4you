@@ -52,47 +52,19 @@ router.post("/applyMessage",function(req,res){
         author2:req.body.business, //business
         comments:[{
             text:thetext,
-            author:currentUser, //always police
+            author:req.user.username, //always police
             date:Date.now()         //Current timestamp
         }]
     }
-    Conversations.find({author1:req.user.username,author2:req.body.business},function(err,results){
-        if(err){
-            console.log(err);
-        }else{
-            console.log("Did conversation exist?")
-            console.log(results)
-            if(results==[]){
+    
                 Conversations.create(comment,function(err){
                     if(err){
                          console.log(err);
              }else{
           
-                 console.log("comment created")
-                  Conversations.find({author1:req.user.username,post:req.body.title},function(err,thecomments){
-                if(err){
-                    console.log(err)
-                }else{
-                    
-                       res.render("campgrounds/messages",{data:thecomments,user:req.user.username});
-                }
-            })
-                    }
-                })
-            }else{
-                 Conversations.find({author1:req.user.username,post:req.body.title},function(err,thecomments){
-                if(err){
-                    console.log(err)
-                }else{
-                    console.log("conversation already exists")
-                       res.render("campgrounds/messages",{data:thecomments,user:req.user.username});
-                }
-            })
-            }   
-        }
-    })
+                 
     
-      Conversations.find({author1:req.user.username,post:req.body.title},function(err,thecomments){
+      Conversations.find({post:req.body.title},function(err,thecomments){
                 if(err){
                     console.log(err)
                 }else{
@@ -100,6 +72,8 @@ router.post("/applyMessage",function(req,res){
                        res.render("campgrounds/messages",{data:thecomments,user:req.user.username});
                 }
             })
+             }
+                })
 })
 
 router.post("/sendMessage/:post",function(req,res){
