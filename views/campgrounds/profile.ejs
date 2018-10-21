@@ -1,0 +1,41 @@
+<% include ../partials/header %>
+<div class="feedbackground"></div>
+
+<link rel="stylesheet" href="/stylesheets/profile.css">
+
+<!-- Styles -->	
+<style>
+body {
+  background-image: url("https://images7.alphacoders.com/478/478847.jpg");
+  background-position: 30% 30%;
+  background-repeat: no-repeat;
+  background-size: 1440px 1200px;
+}
+</style>
+<body>
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="form">
+  <img src= "data:image/jpeg;base64,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" 
+  style="width:100%">
+  <a href="/campgrounds/profile"> <%= currentUser.username %></a>
+  <p class="title">Officer</p>
+  <p>Chicago Police Training Division</p>
+  <a href="#"><i class="fa fa-dribbble"></i></a> 
+  <a href="#"><i class="fa fa-twitter"></i></a> 
+  <a href="#"><i class="fa fa-linkedin"></i></a> 
+  <a href="#"><i class="fa fa-facebook"></i></a> 
+  <p><button>Contact</button></p>
+    <p><a href="/campgrounds/messages">Direct Messages</a></p>
+
+</div>
+        
+
+        
+
+
+
+
+<% include ../partials/footer %>

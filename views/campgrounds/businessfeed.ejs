@@ -1,0 +1,32 @@
+<% include ../partials/header %> 
+
+<link rel="stylesheet" href="/stylesheets/login.css">
+
+
+<div class="login-page">
+    
+  <div class="form">
+       <h3>Post a Job</h3>
+    <form class="register-form">
+       
+      <input type="text" placeholder="name"/>
+      <input type="password" placeholder="password"/>
+      <input type="text" placeholder="email address"/>
+      <button>create</button>
+      <p class="message">Already registered? <a href="#">Sign In</a></p>
+    </form>
+    <form class="login-form" action="/campgrounds/postJob" method="post">
+      <input type="text" name="title" placeholder="Job Title"/>
+      <input type="text" name="location" placeholder="Location"/>
+      <input type="text" name="rate" placeholder="Rate"/>
+      <textarea type="text" name="description" placeholder="Description"></textarea>
+      
+      <button type="submit">Post</button>
+      
+    </form>
+  </div>
+</div>
+
+
+     
+     <% include ../partials/footer %> 

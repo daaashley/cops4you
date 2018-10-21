@@ -1,0 +1,43 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <p class="lead">Cops4You</p>
+            <div class="list-group">
+                <li class="list-group-item active">Security Job</li>
+                <li class="list-group-item">Paid</li>
+                <li class="list-group-item">Available</li>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="thumbnail">
+                <img class="img-responsive" src="https://m.wsj.net/video/20160525/052416bouncer/052416bouncer_640x360.jpg">
+                <div class="caption-full">
+                    <h4 class="pull-right"><%= campground.rate %></h4>
+                    <h4><a><%=campground.title%></a></h4>
+                    <p><%= campground.location %></p>
+                    <p><%= campground.description %></p>
+                    <p>
+                        <em>Submitted By <%= campground.author.username %></em>
+                    </p>
+                    <!--
+                   
+                    -->
+                </div>
+            </div>
+            <div class="well">
+                <div class="text-right">
+                    <form action="/campgrounds/applyMessage" method="post">
+                    <button class="btn btn-success" type="submit">Apply</button>
+                    <input name="business" value=<%= campground.author.username %> hidden>
+                    <input name="title" value=<%= campground.title %> hidden>
+                    </form>
+                </div>
+                
+                    
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>

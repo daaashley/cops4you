@@ -1,0 +1,23 @@
+
+#nav{
+    z-index: 1;
+  
+}
+    .thumbnail img {
+    width: 100%;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
+
+#delete-form {
+    display: inline;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+

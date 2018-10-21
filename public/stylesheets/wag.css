@@ -1,0 +1,104 @@
+/*body {
+
+
+    background-image: url("http://scff.info/wp-content/uploads/2017/12/dog-paw-print-template-25-unique-cat-paw-print-ideas-on-pinterest-animal-print-mittens-ideas.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    background-position: center; 
+
+
+
+}*/
+#paw{
+ 
+    text-align: center;
+    position: relative;
+   
+}
+
+
+.container h1{
+    background-position: relative;
+    color: blue;
+    text-align: center;
+   
+
+
+}
+.container h3{
+    color: blue;
+    text-align: center;
+    padding: 30px 0;
+}
+.square {
+    position: relative;
+    z-index: 10;
+
+}
+
+#swipes {
+
+    background: none;
+    text-align: center;
+    color: black;
+    word-spacing: 240px;
+    z-index: 2;
+    margin-top: -240px;
+   
+  
+
+}
+.pos {
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: green;
+    letter-spacing: 1px;
+    font-size: inherit;
+    
+  
+
+
+}
+.pos:hover {
+    color: white;
+    background-color: green;
+}
+
+.neg {
+
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: red;
+    letter-spacing: 1px;
+    font-size: inherit;
+  
+
+
+
+}
+.neg:hover {
+    color: white;
+    background: red;
+}
+/*
+.square {
+ 
+    positon: relative;
+   
+    margin: -25% 39% ;
+    height:16.5%;
+    
+    background-color: black;
+    
+   
+
+}
+.square h1 {
+    color: #fff;
+}
+*/

@@ -1,0 +1,110 @@
+
+body {
+  background-color: #000;
+}
+
+.all{
+  width: 150px;
+        
+        margin-top: 25px;
+        
+}
+
+#btn1{
+  margin-right: 100px;
+}
+
+
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  
+  
+}
+
+
+
+#landing-header h1 {
+  color: white;
+  font-size: 80px;
+  font-family: 'Roboto', sans-serif;;
+  border-color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+#landing-header h3 {
+    
+  color: white;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+  border-color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.slideshow { 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite; 
+}
+
+.slideshow li:nth-child(1) { 
+  background-image: url(https://media.gettyimages.com/photos/police-line-do-not-cross-picture-id482691137?b=1&k=6&m=482691137&s=612x612&w=0&h=2kDMvc2WyTxMRMG_qhl_wu4ZzG-dZ31khmiu3T5pZwk=) 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(https://media.gettyimages.com/photos/police-officers-picture-id468740573?b=1&k=6&m=468740573&s=612x612&w=0&h=D-NDVeE6B8IOTQzh2IPbeWJ3k6dZLNUwE-_c90fgZLQ=);
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(https://cdn.pixabay.com/photo/2015/07/31/15/01/police-869216_1280.jpg);
+  animation-delay: 20s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(https://cdn.pixabay.com/photo/2015/06/01/19/56/bodyworn-794099__340.jpg);
+  animation-delay: 30s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(https://images.unsplash.com/photo-1504163598380-5a8ea881897f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b59472470ec7b8ebbb3525bba4a4b8e2&auto=format&fit=crop&w=634&q=80);
+  animation-delay: 40s; 
+}
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+
+/* Older browser support - class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}

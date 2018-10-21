@@ -1,0 +1,55 @@
+<% include ../partials/header %>
+<link rel="stylesheet" href="/stylesheets/messages.css">
+
+
+<div class="container">
+    <div id="sidebar">
+        <div class="list-group">
+  <button type="button" class="list-group-item list-group-item-action active">
+    Messages
+  </button>
+  <% data.forEach(function(conversation){  %>
+        <button type="button" class="boxsize list-group-item list-group-item-action"><P><%= conversation.author2 %></P></button>
+
+  <% }) %>
+
+</div>
+    </div>
+    <div id="messagefeed">
+        
+      <div class="container">
+  <div class="screen">
+    <% data[0]["comments"].forEach(function(comment){ %>
+       
+     <% if(comment["author"]==user){ %>
+        <div class="message__list">
+             <div class="message__item message__item--user">
+             <span class="message message--user"><%= comment["text"]  %></span>
+            </div>
+        </div>
+        <% }else{ %>
+        <div class="message__list">
+            <div class="message__item message__item--bot">
+            <span class="message message--bot"><%= comment["text"] %>.</span>
+            </div>
+             </div>
+             <% } %>
+    <% }) %>
+            
+    
+  </div>
+ 
+</div> 
+ 
+    </div>
+    <div class="textbox">
+        <form action="/campgrounds/sendMessage/<%= data[0]["_id"]%>" method="post">
+    <textarea id='thetext' name="message" placeholder="send message..."></textarea><button type="submit" class="btn" id = "send">Send</button>
+    </form>
+  </div>
+    
+    
+    
+</div>
+<!-- <P><%= data[0] %></P>-->
+  <% include ../partials/footer %> 
